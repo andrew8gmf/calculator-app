@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="calculator">
+    <div class="calculator__header">
+        <h1 class="calculator__header__title">calc</h1>
+    </div>
+    <div class="calculator__screen"></div>
+    <div class="calculator__keypad">
+        <button class="calculator__keypad__button" *ngFor="let item of buttons" [ngClass]="item.type">{{ item.value }}</button>
+    </div>
+</div>
