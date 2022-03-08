@@ -1,0 +1,93 @@
+.calculator {
+    padding: 20px;
+    width: 400px;
+
+    &__header {
+        height: 3rem;
+        justify-content: space-between;
+
+        &__title {
+            color: var(--color-font-theme);         
+            font-size: 26px;
+            margin: 0;
+        }
+    }
+
+    &__header,
+    &__screen {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1rem;
+        max-width: 100%; 
+    }
+
+    &__screen {
+        background: var(--color-screen);
+        color: var(--color-value);
+        font-size: 32px;
+        height: 4.5rem;
+        justify-content: flex-end;
+        overflow-x: hidden;
+    }
+
+    &__screen,
+    &__keypad {
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    &__keypad {
+        background: var(--color-keypad);
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,1fr);
+        max-width: 100%;
+
+        &__button {
+            border: 0;
+            border-radius: 8px;
+            cursor: pointer;
+            display: grid;
+            height: 45px;
+            padding-top: 4px;
+            place-items: center;
+            transition: box-shadow 90ms ease,-webkit-transform 90ms ease;
+            transition: box-shadow 90ms ease,transform 90ms ease;
+            transition: box-shadow 90ms ease,transform 90ms ease,-webkit-transform 90ms ease;
+        }
+
+        .number,
+        .operation {
+            background-color: var(--color-button-number);
+            box-shadow: 0 4px 0 0 var(--color-shadow-button-number);
+            color: var(--color-font-button-number);
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .delete,
+        .reset {
+            background-color: var(--color-button-del);
+            box-shadow: 0 4px 0 0 var(--color-shadow-button-del);
+            color: var(--color-font-button-del);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .reset,
+        .result {
+            grid-column: span 2;
+        }
+
+        .result {
+            background-color: var(--color-button-result);
+            box-shadow: 0 4px 0 0 var(--color-shadow-button-result);
+            color: var(--color-font-button-result);
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
