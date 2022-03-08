@@ -1,9 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
-html, body { background: var(--color-background); height: 100%; }
-body { margin: 0; font-family: 'Spartan', sans-serif; }
-button { font-family: 'Spartan', sans-serif; }
+html, body { 
+	background: var(--color-background); 
+	height: 100%; 
+}
+
+body { 
+	margin: 0;
+	font-family: 'Spartan', sans-serif;
+	width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+}
+
+button { 
+	font-family: 'Spartan', sans-serif; 
+}
+
+app-home {
+	height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 :is(:root, :root[data-theme='neutral']) {
 	--color-background: hsl(222, 26%, 31%);
